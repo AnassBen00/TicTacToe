@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <Button fx:id="startButton" layoutX="217.0" layoutY="51.0" mnemonicParsing="false" onAction="#startTest" prefHeight="23.0" prefWidth="152.0" text="Start">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <TextField fx:id="outputText" layoutX="115.0" layoutY="173.0" onAction="#updatError" prefHeight="41.0" prefWidth="370.0" />
+      <ProgressBar fx:id="pb" layoutX="188.0" layoutY="294.0" prefHeight="23.0" prefWidth="210.0" progress="0.0" />
+      <ProgressIndicator fx:id="pi" layoutX="287.0" layoutY="254.0" prefHeight="41.0" prefWidth="26.0" progress="0.0" />
+   </children>
+</Pane>

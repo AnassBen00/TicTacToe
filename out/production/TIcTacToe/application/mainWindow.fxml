@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="idAnchorPane" prefHeight="540.0" prefWidth="747.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenu">
+   <children>
+      <Button fx:id="idStart" layoutX="260.0" layoutY="287.0" mnemonicParsing="false" onAction="#StartGameActionPerformed" prefHeight="42.0" prefWidth="227.0" text="Start game">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+          <graphic>
+             <ImageView fx:id="startIcon" fitHeight="23.0" fitWidth="35.0" layoutX="231.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                   <Image url="@../../resources/images/play-button-arrowhead(1).png" />
+                </image></ImageView>
+          </graphic>
+      </Button>
+      <Button fx:id="loadButton" layoutX="260.0" layoutY="349.0" mnemonicParsing="false" onAction="#loadGame" prefHeight="42.0" prefWidth="227.0" text="Load game">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+       <graphic>
+          <ImageView fx:id="reloadIcon" fitHeight="23.0" fitWidth="35.0" layoutX="231.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                <Image url="@../../resources/images/reload.png" />
+             </image></ImageView>
+       </graphic>
+      </Button>
+      <Button fx:id="idSettings" layoutX="260.0" layoutY="412.0" mnemonicParsing="false" onAction="#SettingsActionPerformed" prefHeight="42.0" prefWidth="227.0" text="Settings">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+       <graphic>
+          <ImageView fx:id="settingsIcon" fitHeight="23.0" fitWidth="35.0" layoutX="231.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                <Image url="@../../resources/images/settings.png" />
+             </image></ImageView>
+       </graphic>
+      </Button>
+      <Pane fx:id="idTitlePane" layoutX="152.0" layoutY="76.0" prefHeight="143.0" prefWidth="492.0">
+         <children>
+            <ImageView fx:id="Title" fitHeight="97.0" fitWidth="431.0" layoutX="7.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/logolabel.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

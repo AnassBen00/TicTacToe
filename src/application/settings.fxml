@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: #FFFFFF;" fx:controller="controller.Settings">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="81.0" layoutY="39.0" text="Board dimensions :">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idColumn" layoutX="242.0" layoutY="35.0" prefHeight="25.0" prefWidth="29.0" />
+            <Label layoutX="278.0" layoutY="40.0" text="X">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idRow" layoutX="295.0" layoutY="35.0" prefHeight="25.0" prefWidth="29.0" />
+            <Button fx:id="idSaveButton" layoutX="160.0" layoutY="84.0" mnemonicParsing="false" onAction="#ActionSaveDimensions" prefHeight="27.0" prefWidth="101.0" text="Save">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="226.0" layoutY="150.0" text="AI Configuration">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonValider" layoutX="243.0" layoutY="339.0" mnemonicParsing="false" onAction="#validerConfig" prefHeight="33.0" prefWidth="115.0" text="Submit">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font></Button>
+            <TextField fx:id="facileH" layoutX="51.0" layoutY="212.0" prefHeight="25.0" prefWidth="138.0" />
+            <TextField fx:id="facileR" layoutX="229.0" layoutY="212.0" prefHeight="25.0" prefWidth="138.0" />
+            <TextField fx:id="facilenbLayers" layoutX="411.0" layoutY="212.0" prefHeight="25.0" prefWidth="138.0" />
+            <TextField fx:id="difficileH" layoutX="50.0" layoutY="287.0" prefHeight="25.0" prefWidth="138.0" />
+            <TextField fx:id="difficleR" layoutX="226.0" layoutY="288.0" prefHeight="25.0" prefWidth="138.0" />
+            <TextField fx:id="difficilenbLayers" layoutX="411.0" layoutY="288.0" prefHeight="25.0" prefWidth="138.0" />
+            <Label layoutX="55.0" layoutY="181.0" prefHeight="25.0" prefWidth="107.0" text="Facile">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="53.0" layoutY="255.0" prefHeight="25.0" prefWidth="55.0" text="Difficile">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button fx:id="idBackButton" layoutX="15.0" layoutY="18.0" mnemonicParsing="false" onAction="#BackButtonAction" prefHeight="37.0" prefWidth="44.0" />
+            <ImageView fx:id="backIcon" fitHeight="23.0" fitWidth="35.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/left-arrow.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="manageModelsButton" layoutX="409.0" layoutY="41.0" mnemonicParsing="false" onAction="#actionManageModels" text="Manage Models">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+
+      </Pane>
+   </children>
+</AnchorPane>

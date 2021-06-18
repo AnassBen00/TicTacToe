@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="747.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameController">
+    <children>
+        <BorderPane layoutX="6.0" layoutY="9.0" prefHeight="515.0" prefWidth="738.0">
+            <top>
+                <Pane fx:id="header" prefHeight="103.0" prefWidth="738.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 2, 0, 0, 0);" BorderPane.alignment="CENTER">
+                    <children>
+                        <GridPane layoutX="-2.0" prefHeight="84.0" prefWidth="738.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints fx:id="turnDisplay" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints fx:id="scoreDisplay" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label fx:id="currentPlayerTurn" alignment="CENTER" prefHeight="36.0" prefWidth="738.0" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="Segoe UI Semibold Italic" size="25.0" />
+                                    </font></Label>
+                                <HBox prefHeight="42.0" prefWidth="327.0" GridPane.rowIndex="1">
+                                    <children>
+                              <Pane prefHeight="58.0" prefWidth="188.0">
+                                 <children>
+                                    <Button fx:id="newGameLauncher" layoutX="14.0" layoutY="3.0" mnemonicParsing="false" onAction="#launchNewGame" prefHeight="37.0" prefWidth="138.0" style="-fx-background-color:#43deb7;                                      -fx-background-radius: 6, 5;                                      -fx-background-insets: 0, 1;                                      -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );                                      -fx-text-fill: #F2F2F2;                                      " text="New Game" textAlignment="CENTER" textFill="#28ae79">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="16.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                                        <Label fx:id="playerOneScore" alignment="CENTER" prefHeight="34.0" prefWidth="116.0" text="0" textFill="#727272">
+                                            <font>
+                                                <Font name="Segoe UI" size="30.0" />
+                                            </font></Label>
+                                        <Label fx:id="seprator" alignment="CENTER" prefHeight="41.0" prefWidth="103.0" text=":" textAlignment="CENTER">
+                                            <font>
+                                                <Font name="Segoe UI Black" size="22.0" />
+                                            </font></Label>
+                                        <Label fx:id="playerTwoScore" alignment="CENTER" prefHeight="32.0" prefWidth="119.0" text="0" textFill="#6f6d6d">
+                                            <font>
+                                                <Font name="Segoe UI" size="30.0" />
+                                            </font></Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="backToMenu" layoutX="68.0" layoutY="3.0" mnemonicParsing="false" onAction="#backToMenuActionPerformed" prefHeight="37.0" prefWidth="138.0" style="-fx-background-color:#43deb7;                                             -fx-background-radius: 6, 5;                                             -fx-background-insets: 0, 1;                                             -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );                                             -fx-text-fill: #F2F2F2;                                             " text="Back to menu" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="16.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                                    </children>
+
+                                </HBox>
+
+                            </children>
+
+                        </GridPane>
+                    </children></Pane>
+            </top>
+            <left>
+                <Pane fx:id="firstPlayer" prefHeight="429.0" prefWidth="148.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" BorderPane.alignment="CENTER">
+                    <children>
+                        <GridPane fx:id="firstPlayerGridPane" alignment="CENTER" layoutY="4.0" prefHeight="176.0" prefWidth="135.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+                            </rowConstraints>
+                            <children>
+                                <Label fx:id="playerOneName" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="136.0" text="Player1" textAlignment="CENTER" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="Eras Demi ITC" size="16.0" />
+                                    </font></Label>
+                        <Pane fx:id="playerOneImagePane" prefHeight="72.0" prefWidth="138.0">
+                           <children>
+                              <ImageView fx:id="playerOneImage" fitHeight="60.0" fitWidth="60.0" layoutX="38.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                  <Image url="@../../resources/images/cross.png" />
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="72.0" prefWidth="135.0" GridPane.rowIndex="2">
+                           <children>
+                                      <Button fx:id="saveBtn" layoutX="35.0" layoutY="11.0" mnemonicParsing="false" onAction="#saveGame" prefHeight="37.0" prefWidth="66.0" style="-fx-background-color:#43deb7;                                             -fx-background-radius: 6, 5;                                             -fx-background-insets: 0, 1;                                             -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );                                             -fx-text-fill: #F2F2F2;                                             " text="Save" textAlignment="CENTER">
+                                          <font>
+                                              <Font name="Segoe UI Semibold" size="16.0" />
+                                          </font>
+                                      </Button>
+                           </children>
+                        </Pane>
+                               
+                            </children>
+                        </GridPane>
+                  <Label fx:id="saveLabel" layoutX="14.0" layoutY="189.0" prefHeight="26.0" prefWidth="119.0" textFill="darkgreen" />
+                    </children></Pane>
+            </left>
+            <right>
+                <Pane fx:id="secondPlayer" prefHeight="309.0" prefWidth="130.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" BorderPane.alignment="CENTER">
+                    <children>
+                        <GridPane fx:id="secondPlayerGridPane" layoutY="-1.0" prefHeight="132.0" prefWidth="134.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+
+                            </rowConstraints>
+                            <children>
+                                <Label fx:id="playerTwoName" alignment="CENTER" prefHeight="22.0" prefWidth="111.0" text="Player2" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="Eras Demi ITC" size="16.0" />
+                                    </font></Label>
+                        <Pane fx:id="playerTwoImagePane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="playerTwoImage" fitHeight="71.0" fitWidth="59.0" layoutX="14.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+                                  <Image url="@../../resources/images/circle.png" />
+                              </ImageView>
+                           </children>
+                        </Pane>
+                            </children>
+                        </GridPane>
+                    </children></Pane>
+            </right>
+            <center>
+                <Pane layoutX="180.0" prefHeight="420.0" prefWidth="420.0" style="-fx-background-color: #ffffff;">
+                    <GridPane fx:id="gridGame" prefHeight="420.0" prefWidth="420.0">
+                    </GridPane>
+                    <Pane fx:id="gridToppingPane" disable="true" prefHeight="420.0" prefWidth="407.0" />
+                </Pane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
